@@ -5,7 +5,7 @@ class BasePage {
     async navigate(url){
         await this.page.goto(url);
     }
-    async getTtle(){
+    async getTitle(){
         return await this.page.title();
     }
 }
