@@ -20,12 +20,15 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
+        working-directory: automation
         run: npm ci
 
       - name: Install Playwright Browsers
+        working-directory: automation
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
+        working-directory: automation
         run: npx playwright test --reporter=json
 
       - name: Upload Playwright Report
